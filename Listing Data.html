@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function add(){
+    var a = document.getElementById("txt").value;
+    var b = '<option>select</option>';
+    for(var i = 0; i <= a; i++){
+        b += '<option value>'+i+'</option>';
+    }
+    document.getElementById("opt").innerHTML=b;
+} 
+</script>
+<body>
+    
+    <label>Enter number</label>
+    <input type="number" name="" id="txt"><br><br>
+    <select name="select" id="opt"></select><br><br>
+    <input type="button" value="Done" onclick="add()"><br><br>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function gen(){
+    var n = document.getElementById("name").value;
+    var date = document.getElementById("dob").value;
+    var first = n.slice(0,4);
+    var d = new Date(date);
+    var last = d.getDate();
+    var comb = first + last;
+    document.getElementById("pass").value = comb;
+    }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="name">Enter Your Name</label>
+        <input type="text" name="" id="name"><br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="" id="dob"><br><br>
+        <label for="password">Password</label>
+        <input type="text" name="" id="pass"><br><br>
+        <input type="button" value="Submit" onclick="gen()">
+    </form>
+</body>
+</html>

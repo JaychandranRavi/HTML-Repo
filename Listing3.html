@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creating selection box using dom</title>
+    <script>
+        function add(){
+    var a = document.getElementById("txt").value;
+    var b = '<option>select</option>';
+    for(var i = 0; i <= a; i++){
+        b += '<option value = "'+i+'">'+i+'</option>';
+    }
+    document.getElementById("opt").innerHTML = b;
+}
+function select(){
+    var x = document.getElementById("opt").value;
+    var c = '<option>select</option>'; 
+
+    for(var j = 0; j <= x; j++){
+        c += '<option>'+j+'</option>';
+    }
+    document.getElementById("opt1").innerHTML = c;
+}  
+    </script>
+</head>
+<body>
+    <label>Enter number</label>
+    <input type="number" name="" id="txt"><br><br>
+    <label>Selection box1</label>
+    <select name="select" id="opt"  onchange="select()"></select><br><br>
+    <label>Selection box2</label>
+    <select name="select" id="opt1" ></select><br><br>
+    <input type="button" value="Done" onclick="add()"><br><br>
+</body>
+</html>

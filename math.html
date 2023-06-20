@@ -1,0 +1,139 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  function rand(min, max) {
+  if (min === undefined) {
+    min = 0;
+  }
+  if (max === undefined) {
+    max = Number.MAX_SAFE_INTEGER;
+  }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(rand(15,15));
+console.log(rand(5,5));
+console.log(rand(1,1)); 
+console.log(rand(0,0)); 
+</script>
+</body>
+</html> -->
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math</title>
+</head>
+<body>
+  <script>
+  function decimals(number, decimals) {
+  if (typeof decimals !== "number" || decimals < 0) {
+    throw new Error("decimals must be a positive integer");
+  }
+  var numberString = String(number);
+  var decimalPointIndex = numberString.indexOf(".");
+  if (decimalPointIndex === -1) {
+    return numberString;
+  }
+  var numberOfDigitsAfterDecimal = numberString.length - decimalPointIndex - 1;
+  if (numberOfDigitsAfterDecimal <= decimals) {
+    return numberString;
+  }
+  return parseFloat(numberString).toFixed(decimals);
+}
+console.log(decimals(2.100212, 2));
+console.log(decimals(2.100212, 3));
+console.log(decimals(2100, 2));
+</script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+function max(array) {
+  let highestValue = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > highestValue) {
+      highestValue = array[i];
+    }
+  }
+  return highestValue;
+}
+console.log(max([12,34,56,1]));
+console.log(max([-12,-34,0,-56,-1])); 
+</script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>function min(array) {
+  let lowestValue = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < lowestValue) {
+      lowestValue = array[i];
+    }
+  }
+  return lowestValue;
+}
+console.log(min([12,34,56,1]));
+console.log(min([-12,-34,0,-56,-1]));
+</script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>function isNatural(n) {
+  if (typeof n !== 'number') {
+    return false;
+  }
+  return (n >= 0 && Math.floor(n) === n && n !== Infinity);
+}
+console.log(isNatural(-15)); // false
+console.log(isNatural(1)); // true
+console.log(isNatural(10.22)); // false
+console.log(isNatural(10/0)); // false
+
+</script>
+</body>
+</html>

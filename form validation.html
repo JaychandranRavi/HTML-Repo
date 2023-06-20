@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <script>
+    function empty(){
+        var a = document.getElementById("pass").value;
+        var b = document.getElementById("confirmpass").value;
+        if(a.length == null || b.length == ""){
+            alert("kindly fill it and try :) ");
+        }else if(a.length == "" || b == null){
+            alert("One of your data is empty");
+        }  
+        }
+    </script>
+</head>
+<body>
+    <label>Password</label>
+    <input type="text" name="" id="pass"><br><br>
+    <label>Confirm Password</label>
+    <input type="text" name="" id="confirmpass" value=""><br><br>
+    <input type="button" value="Check" onclick="empty()">
+</body>
+</html>

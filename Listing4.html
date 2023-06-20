@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function add()
+        {
+            let num=parseInt(document.getElementById("txt").value);
+            let opt='<option value="">select</option>';
+            for(let i=0; i<=num; i++){
+                opt+= '<option value="'+i+'">'+i+'</option>';
+            }
+        
+            document.getElementById("opa").innerHTML=opt;
+        }
+        
+        function dataIncert()
+        {
+            let emptyStr="";
+            let slt=document.getElementById("opa").value;
+        
+            for(let j=0; j<=parseInt(slt); j++)
+            {
+               emptyStr+="<tr><td>"+j+"</td><td><input type='text'></td><td><input type='text'/></td></tr>";
+                console.log(j);
+            }
+        
+            document.getElementById("tbodyId").innerHTML=emptyStr;
+        
+        }
+
+    </script>
+    
+
+</head>
+<body>
+    
+
+
+<label>Enter Value</label>
+ <input type="number" name="" id="txt"><br><br>
+ <label>Selection 1</label>
+ <select name="select" id="opa"  onchange="dataIncert()"></select><br><br>
+<button type="submit" value="Click" onclick="add()" >Click</button>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>User Name</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody id="tbodyId"></tbody>
+</table>
+</body>
+</html>

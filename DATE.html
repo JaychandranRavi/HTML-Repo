@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+function curday(symbol) {
+  // Get the current date
+  let now = new Date();
+
+  // Get the year, month, and day
+  let year = now.getFullYear();
+  let month = now.getMonth() + 1;
+  let day = now.getDate();
+
+  // Return the date in the desired format
+  return `${month}${symbol}${day}${symbol}${year}`;
+}
+ console.log(curday("*"));
+ console.log(curday("-"));
+
+</script>
+</body>
+</html>
+
+
+
+
+Date exercise 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+function getDaysInMonth(month, year) {
+    // Check if the year is a leap year
+    const isLeapYear = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+  
+    // Get the number of days in the month
+    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (isLeapYear) {
+      daysInMonth[1] = 29;
+    }
+  
+    // Return the number of days in the month
+    return daysInMonth[month - 1];
+  }
+  console.log(getDaysInMonth(1, 2012)); // 31
+  console.log(getDaysInMonth(2, 2012)); // 29
+  console.log(getDaysInMonth(9, 2012)); // 30
+  console.log(getDaysInMonth(12, 2012)); // 31
+</script>
+</body>
+</html>
+
+
+
+Date exercise 3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+function month_name(date) {
+  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var month = date.getMonth();
+  return monthNames[month];
+}
+console.log(month_name(new Date("10/11/2009")));
+
+console.log(month_name(new Date("11/13/2014")));
+</script>
+</body>
+</html>
