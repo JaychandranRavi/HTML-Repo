@@ -9,34 +9,9 @@
     <button onclick="apidata()">view</button>
     <P id="ouput_display"></P>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <script>
         async function apidata(){
-    var data= await fetch("https://fakestoreapi.com/products")
+    var data= await fetch("https://fakestoreapi.com/products?limit=5")
     var res=await data.json()
     console.log(res)
     var output=" "
@@ -48,3 +23,9 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
